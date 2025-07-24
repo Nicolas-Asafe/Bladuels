@@ -1,12 +1,46 @@
 .Inventory {
     display: flex;
-    border-radius: 10px;
+    flex-direction: column;
     position: absolute;
-    right: 10px;
-    gap: 20px;
-    left: 100;
     width: max-content;
-    /* flex-direction: column; */
+    right: 10px;
+    gap: 3px;
+    left: 100;
+}
+
+.Hotbar {
+    background-color: #000000bd;
+    border: 2px solid #000000;
+    padding: 4px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+.Hotbar>.Swords {
+    background-color: #000000bd;
+    padding: 10px;
+    border: 2px solid #000000;
+    border-radius: 3px;
+}
+
+.BackPack {
+    display: flex;
+    border-radius: 10px;
+    right: 10px;
+    gap: 3px;
+    left: 100;
+}
+
+.BackPack h1 {
+    color: #ffffff;
+    background-color: #000000bd;
+    font-size: 40px;
+    padding: 10px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    margin: 0px;
+    margin-bottom: 1px;
 }
 
 .materials-list {

@@ -4,6 +4,7 @@ export default class SectionUserData {
         this.Level = 1;
         this.Experience = 0;    
         this.Health = 100;
+        this.Materials = []
         this.Swords = [];
         this.Coins = 0;
         this.SwordsForBattles={Sword1: null, Sword2: null, Sword3: null};
