@@ -1,11 +1,10 @@
-import { serviceSwords } from '../swords/main.js';
 import Creation from './entitie.js';
-import User from '../script_pages/CreateAccount.js'
+import currentUser from '../script_pages/CreateAccount.js';
 
-function SwordsForCreate(){
-    const materials = User().getData().Materials
-    const SwordsForCreate = new Creation(materials)
-    return SwordsForCreate.getMatches()
+function SwordsForCreate() {
+    const materials = currentUser.Materials;
+    const forge = new Creation(materials);
+    return forge.getMatches();
 }
 
-export default SwordsForCreate
+export default SwordsForCreate;

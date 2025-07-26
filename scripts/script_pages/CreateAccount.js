@@ -1,25 +1,19 @@
-import SectionUserData from "../user/data_user.js";
+import Player from "../user/player.js";
 
-const user = new SectionUserData("Undefined User");
+const currentUser = Player();
 
 function registerUser(e) {
     e.preventDefault();
     const username = document.getElementById("username").value;
     if (username) {
-        user.SetName(username);
-        alert("Account created successfully!");
+        currentUser.SetName(username);
+        alert("Conta criada com sucesso!");
         window.location.href = "index.html";
     } else {
-        alert("Please enter a username.");
+        alert("Digite um nome.");
     }
 }
 
-const form = document.querySelector(".RegisterForm");
-if (form) {
-    form.addEventListener("submit", registerUser);
-}
+document.querySelector(".RegisterForm")?.addEventListener("submit", registerUser);
 
-function User(){
-    return user;
-}
-export default User;
+export default currentUser;

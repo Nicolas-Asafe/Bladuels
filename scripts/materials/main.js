@@ -13,8 +13,9 @@ function InitializeMaterials() {
     const Candy = new Material("Candy", 70);
     const Star = new Material("Star", 80);
     const MoonCrystal = new Material("MoonCrystal", 90);
+    const Ruby = new Material("Ruby",190)
     const BirdTear = new Material("BirdTear", 100);
-    Materials.push(Wood, Iron, Gold, Diamond, Emerald, titanium, Candy, Star, MoonCrystal, BirdTear);
+    Materials.push(Wood, Iron, Gold, Diamond, Emerald, titanium, Candy, Star, MoonCrystal, BirdTear,Ruby);
 }
 
 export {InitializeMaterials, MaterialsService};

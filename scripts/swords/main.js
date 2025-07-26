@@ -17,8 +17,8 @@ function InitializeSwords(){
     const TitaniumAxe = new Sword({name: "TitaniumAxe", damage: 150, price: 1000,level:0,life:1000,materials:[["Titanium",20],["Gold",10],["Iron",4],["Wood",15]]});
     const RubySword = new Sword({name: "RubySword", damage: 300, price: 1200,level:0,life:600,materials:[["Ruby",18],["Titanium",7],["Gold",15]]});
     const StarSword = new Sword({name: "StarSword", damage: 360, price: 1320,level:0,life:780,materials:[["Star",23],["Titanium",7],["Gold",15],["MoonCrystal",5]]});
-    const EmeraldSword = new Sword({name: "EmeraldSword", damage: 400, price: 1500,level:0,life:1000,materials:[["Emerald",30],["Titanium",10],["Gold",4]]});
-    const MoonLightSword = new Sword({name: "MoonLightSword", damage: 500, price: 2000,level:0,life:1500,materials:[["MoonCrystal",30],["Titanium",10],["Diamond",20],["Star",10]]});
+    const EmeraldSword = new Sword({name: "EmeraldSword", damage: 400, price: 1500,level:0,life:1000,materials:[["Emerald",20],["Titanium",10],["Gold",4]]});
+    const MoonLightSword = new Sword({name: "MoonLightSword", damage: 500, price: 2000,level:0,life:1500,materials:[["MoonCrystal",11],["Titanium",10],["Diamond",10],["Star",10]]});
     Swords().push(NoobSword, CandySword, IronSword,WaterSword,KnifeSword,DiamondSword,
         GoldSword,TitaniumSword,MoonLightSword,MoonSword,MidNightAxe,TitaniumAxe,RubySword,StarSword,EmeraldSword);
     }

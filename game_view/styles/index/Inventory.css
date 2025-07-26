@@ -42,36 +42,66 @@
     margin: 0px;
     margin-bottom: 1px;
 }
-
-.materials-list {
+.swords-list ,.materials-list {
+    overflow-x: hidden;
+    overflow-y: auto;
     background-color: #000000bd;
     border: 2px solid #000000;
-    overflow-y: scroll;
-    height: 400px;
     border-radius: 5px;
-    display: grid;
-    grid-template-columns: repeat(3, 90px);
-    gap: 10px;
     padding: 12px;
+    display: grid;
+    height: 400px;
+    width: 200px;
+    grid-auto-rows: 50px;
+    justify-content: center ;
+    grid-template-columns: repeat(auto-fill, 50px);
+    gap: 10px;
+    align-content: start; 
 }
 
-.swords-list {
-    background-color: #000000bd;
-    border: 2px solid #000000;
+.sword-item{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.lock{
+    background-color:#080101b9;
     border-radius: 5px;
-    padding: 12px;
-    display: grid;
-    overflow-y: scroll;
-    height: 400px;
-    grid-template-columns: repeat(3, 90px);
-    gap: 10px;
+    position: relative;
+    transform: translateY(-49px);
+    object-fit: contain;
+    z-index: 99;
+    display: flex;
+    justify-content: end;
+    transition: 1s ease;
+     border: 2px solid #000000;
+
+    img{
+        width: 40px;
+        transition: 0.2s ease;
+        height: 40px;
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+    }
+    img:hover{transform: translateY(-0px); box-shadow: none;}
+    img:active{transform: translate(-0px);}
+}
+.lock:active{
+
+    img{
+        transition: 0.2s;
+        height: 100%;
+        transform: scale(2.2);
+        width: 100%;
+    }
 }
 
 img {
     width: 100%;
     border: 2px solid #000000;
     border-radius: 10px;
-    box-shadow: 5px 5px 0px rgb(0, 0, 0);
     background-color: #8f8f8f;
     transition: all 0.1s ease-in-out;
 }

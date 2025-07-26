@@ -1,21 +1,27 @@
+import { serviceSwords } from '../swords/main.js';
+
 export default class Creation {
-    constructor(materials = []) {
-        this.matchedSwords = [];
+    constructor(userMaterials = []) {
+        this.userMaterials = new Map(userMaterials); // [["Wood", 3], ["Iron", 2]] → Map
+        this.matchedSwords = this.findCraftableSwords();
+    }
 
-        materials.forEach(inputMaterial => {
-            const [inputName, inputQty] = inputMaterial;
+    findCraftableSwords() {
+        const allSwords = serviceSwords.getSwords(); // deve retornar array de objetos sword
+        const craftable = [];
 
-            serviceSwords.getSwords().forEach(sword => {
-                const swordHasMaterial = sword.materials.some(
-                    ([matName, matQty]) =>
-                        matName === inputName && matQty === inputQty
-                );
-
-                if (swordHasMaterial) {
-                    this.matchedSwords.push(sword);
-                }
+        for (const sword of allSwords) {
+            const canCraft = sword.materials.every(([matName, matQty]) => {
+                const availableQty = this.userMaterials.get(matName) || 0;
+                return availableQty >= matQty;
             });
-        });
+
+            if (canCraft) {
+                craftable.push(sword);
+            }
+        }
+
+        return craftable;
     }
 
     getMatches() {
