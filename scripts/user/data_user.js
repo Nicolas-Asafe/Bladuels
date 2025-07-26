@@ -7,7 +7,6 @@ class SectionUserData {
         this.Materials = [];
         this.Swords = [];
         this.Coins = 0;
-        this.SwordsForBattles = { Sword1: null, Sword2: null, Sword3: null };
         this.Init = true;
     }
 
@@ -79,18 +78,6 @@ class SectionUserData {
         this.Coins >= amount
             ? this.Coins -= amount
             : console.error(`Coins insuficientes: precisa ${amount}`);
-        this.save();
-    }
-
-    EquipSword(name, slot) {
-        if (this.Swords.find(s => s.name === name)) {
-            this.SwordsForBattles[slot] = name;
-            this.save();
-        }
-    }
-
-    UnequipSword(slot) {
-        this.SwordsForBattles[slot] = null;
         this.save();
     }
 

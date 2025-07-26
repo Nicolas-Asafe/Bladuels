@@ -2,12 +2,12 @@ import { serviceSwords } from '../swords/main.js';
 
 export default class Creation {
     constructor(userMaterials = []) {
-        this.userMaterials = new Map(userMaterials); // [["Wood", 3], ["Iron", 2]] → Map
+        this.userMaterials = new Map(userMaterials); 
         this.matchedSwords = this.findCraftableSwords();
     }
 
     findCraftableSwords() {
-        const allSwords = serviceSwords.getSwords(); // deve retornar array de objetos sword
+        const allSwords = serviceSwords.getSwords(); 
         const craftable = [];
 
         for (const sword of allSwords) {
