@@ -8,89 +8,83 @@
     left: 100;
 }
 
-.Hotbar {
-    background-color: #000000bd;
-    border: 2px solid #000000;
-    padding: 4px;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 5px;
-}
+.OpenBackPack {
+    width: 50px;
+    height: 50px;
+    align-self: end;
+    padding: 0;
 
-.Hotbar>.Swords {
-    background-color: #000000bd;
-    padding: 10px;
-    border: 2px solid #000000;
-    border-radius: 3px;
+    img {
+        width: 100%;
+    }
 }
 
 .BackPack {
-    display: flex;
-    border-radius: 10px;
+    display: none;
     right: 10px;
     gap: 3px;
     left: 100;
 }
 
 .BackPack h1 {
-    color: #ffffff;
-    background-color: #000000bd;
     font-size: 40px;
     padding: 10px;
-    border: 2px solid #000000;
-    border-radius: 5px;
-    margin: 0px;
-    margin-bottom: 1px;
+    border: 2px solid #7e7e7e;
+    box-shadow: 5px 3px 0 #7e7e7e;
+    background-color: #f0f0f0;
+    margin: 5px;
 }
-.swords-list ,.materials-list {
+
+.swords-list,
+.materials-list,
+.shields-list
+ {
     overflow-x: hidden;
     overflow-y: auto;
-    background-color: #000000bd;
-    border: 2px solid #000000;
-    border-radius: 5px;
+    margin: 5px;
     padding: 12px;
     display: grid;
     height: 400px;
     width: 200px;
     grid-auto-rows: 50px;
-    justify-content: center ;
+    justify-content: center;
     grid-template-columns: repeat(auto-fill, 50px);
     gap: 10px;
-    align-content: start; 
+    align-content: start;
+    border: 2px solid #7e7e7e;
+    box-shadow: 5px 3px 0 #7e7e7e;
+    background-color: #f0f0f0;
 }
 
-.sword-item{
-    display: flex; 
+.sword-item {
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.lock{
-    background-color:#080101b9;
-    border-radius: 5px;
-    position: relative;
-    transform: translateY(-49px);
-    object-fit: contain;
-    z-index: 99;
-    display: flex;
-    justify-content: end;
+.lock {
+    background-color: #080101b9;
+    transform: translateY(-53px);
+    width: 100%;
+    height: 90px;
     transition: 1s ease;
-     border: 2px solid #000000;
 
-    img{
-        width: 40px;
+    img {
+        width: 50px;
         transition: 0.2s ease;
-        height: 40px;
+        transform: translateX(19px) translateY(-10px);
         border: none;
         background-color: transparent;
         box-shadow: none;
     }
-    img:hover{transform: translateY(-0px); box-shadow: none;}
-    img:active{transform: translate(-0px);}
-}
-.lock:active{
 
-    img{
+    img:hover {
+        transform: translateY(-10px) translateX(19px);
+        box-shadow: none;
+    }
+
+    img:active {
+        transform: translate(-0px);
         transition: 0.2s;
         height: 100%;
         transform: scale(2.2);
@@ -98,20 +92,34 @@
     }
 }
 
-img {
-    width: 100%;
-    border: 2px solid #000000;
-    border-radius: 10px;
-    background-color: #8f8f8f;
+.Modal {
+    border: 2px solid #7e7e7e;
+    box-shadow: 5px 3px 0 #7e7e7e;
     transition: all 0.1s ease-in-out;
-}
+    background-color: #f0f0f0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
 
-img:hover {
-    transform: translate(2px, 2px);
-    box-shadow: 2px 2px 0 #000000;
+    p {
+        margin: 0;
+        border: 2px solid #7e7e7e;
+        box-shadow: 5px 3px 0 #7e7e7e;
+        transition: all 0.2s ease-in-out;
+        background-color: #f0f0f0;
+        font-size: 19px;
+    }
+    p:hover{
+        transform: translateY(-10px);
+    }
 }
-
-img:active {
-    transform: translate(4px, 4px);
-    box-shadow: 0px 0px 0 #000000;
+.Modal:hover{
+    cursor: pointer;
+    background-color: #dadada;
 }

@@ -9,7 +9,12 @@ InitializeSwords();
 
 window.addEventListener("DOMContentLoaded", () => {
     if (currentUser.Init) {
-        currentUser.AddMaterial(["Wood",3])
+        serviceSwords.getSwords().forEach(s=>{
+            currentUser.AddSword(s)
+            // s.materials.forEach(m=>{
+                // currentUser.AddMaterial(m)
+            // })
+        })
         currentUser.setInit(false);
     }
     RenderInventoryMaterials();

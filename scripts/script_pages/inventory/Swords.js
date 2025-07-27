@@ -1,7 +1,9 @@
 const InventorySwords = document.querySelector(".swords-list");
 import SwordsForCreate from '../../BreedingAnvil/main.js'
+import PlaySound_click from '../../ClickSound/main.js';
 import currentUser from "../CreateAccount.js";
 import CreateSword from './Inventory.js';
+import ShowModal from './modalSword.js';
 
 
 export default function RenderInventorySwordsAndPossibleSwords() {
@@ -16,9 +18,12 @@ export default function RenderInventorySwordsAndPossibleSwords() {
         img.src = sword.image_url;
         img.alt = sword.name;
         img.className = "sword-image";
-
         swordDiv.appendChild(img);
         fragment.appendChild(swordDiv);
+        swordDiv.addEventListener("click",()=>{
+            ShowModal(sword)
+            PlaySound_click()
+        })
     });
 
     InventorySwords.appendChild(fragment);

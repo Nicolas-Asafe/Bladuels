@@ -6,6 +6,7 @@ class SectionUserData {
         this.Health = 100;
         this.Materials = [];
         this.Swords = [];
+        this.Shields = [];
         this.Coins = 0;
         this.Init = true;
     }
@@ -26,6 +27,7 @@ class SectionUserData {
             Swords: this.Swords,
             Coins: this.Coins,
             SwordsForBattles: this.SwordsForBattles,
+            Shields:this.Shields,
             Init: this.Init
         };
     }
@@ -49,6 +51,7 @@ class SectionUserData {
         this.save();
     }
 
+
     RemoveMaterial(name) {
         const i = this.Materials.findIndex(([mat]) => mat === name);
         if (i !== -1) {
@@ -63,7 +66,10 @@ class SectionUserData {
         this.Swords.push(sword);
         this.save();
     }
-
+    AddShields(Shield){
+        this.Shields.push(Shield)
+        this.save();
+    }
     RemoveSword(name) {
         this.Swords = this.Swords.filter(s => s.name !== name);
         this.save();
