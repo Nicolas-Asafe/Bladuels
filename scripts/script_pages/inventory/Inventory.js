@@ -5,12 +5,19 @@ import PlaySound_click from "../../ClickSound/main.js";
 
 const BtnShow = document.querySelector(".OpenBackPack")
 const BackPackDiv = document.querySelector(".BackPack")
-BtnShow.addEventListener("click",()=>{
-    PlaySound_click()
+function ShowOrHideInventory(){
+     PlaySound_click()
     if (BackPackDiv.style.display === "flex"){
         BackPackDiv.style.display = "none"
     }else{
         BackPackDiv.style.display = "flex"
+    }
+}
+BtnShow.addEventListener("click",ShowOrHideInventory)
+document.addEventListener("keydown",function (event){
+    if (event.key === "e"){
+        ShowOrHideInventory()
+        return
     }
 })
 export default function CreateSword(sword) {

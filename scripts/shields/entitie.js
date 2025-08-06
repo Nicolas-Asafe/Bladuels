@@ -1,11 +1,14 @@
+import { Select_URL_of_Shield } from "../image_scripts/main.js"
 export default class Shield{
     constructor(ShieldParams={name,life,protection,level,price,materials:[]}){
         this.name = ShieldParams.name
         this.life = ShieldParams.life
+        this.image_url = Select_URL_of_Shield(this.name)
         this.protection = ShieldParams.protection
         this.materials = ShieldParams.materials
         this.level = ShieldParams.level
         this.price = ShieldParams.price   
+        return this
     }
     AddLevel(level){
         this.level = level;
@@ -13,6 +16,9 @@ export default class Shield{
         this.protection = this.protection * 0.3
         this.price = this.level * 2;
         return this
+    }
+    RemoveLife(amount){
+        this.life -= amount
     }
     GetData() {
     return {
