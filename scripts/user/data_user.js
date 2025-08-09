@@ -66,7 +66,7 @@ class SectionUserData {
         this.Swords.push(sword);
         this.save();
     }
-    AddShields(Shield){
+    AddShield(Shield){
         this.Shields.push(Shield)
         this.save();
     }

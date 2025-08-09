@@ -2,6 +2,7 @@ import currentUser from "../CreateAccount.js";
 import RenderInventoryMaterials from "./Materials.js";
 import RenderInventorySwordsAndPossibleSwords from "./Swords.js";
 import PlaySound_click from "../../ClickSound/main.js";
+import RenderInventoryShieldsAndPossibleShields from "./Shields.js";
 
 const BtnShow = document.querySelector(".OpenBackPack")
 const BackPackDiv = document.querySelector(".BackPack")
@@ -20,7 +21,7 @@ document.addEventListener("keydown",function (event){
         return
     }
 })
-export default function CreateSword(sword) {
+export function CreateSword(sword) {
     sword.materials.forEach(([matName, qty]) => {
         for (let i = 0; i < qty; i++) {
             currentUser.RemoveMaterial(matName);
@@ -37,4 +38,24 @@ export default function CreateSword(sword) {
 
     RenderInventoryMaterials();
     RenderInventorySwordsAndPossibleSwords();
+    RenderInventoryShieldsAndPossibleShields();
+}
+export function CreateShield(shield) {
+    shield.materials.forEach(([matName, qty]) => {
+        for (let i = 0; i < qty; i++) {
+            currentUser.RemoveMaterial(matName);
+        }
+    });
+
+    currentUser.AddShield(shield);
+
+    const som = document.getElementById("SoundCreateSword");
+    if (som) {
+        som.currentTime = 0;
+        som.play();
+    }
+
+    RenderInventoryMaterials();
+    RenderInventorySwordsAndPossibleSwords();
+    RenderInventoryShieldsAndPossibleShields();
 }

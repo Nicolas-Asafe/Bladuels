@@ -1,21 +1,23 @@
 import currentUser from "./script_pages/CreateAccount.js";
-import { InitializeMaterials } from "./materials/main.js";
+import { InitializeMaterials, MaterialsService } from "./materials/main.js";
 import { InitializeSwords, serviceSwords } from "./swords/main.js";
 import RenderInventoryMaterials from "./script_pages/inventory/Materials.js";
 import RenderInventorySwordsAndPossibleSwords from "./script_pages/inventory/Swords.js";
-import RenderInventoryShields from "./script_pages/inventory/Shields.js";
+import RenderInventoryShieldsAndPossibleShields from "./script_pages/inventory/Shields.js";
 
 InitializeMaterials();
 InitializeSwords();
 
 window.addEventListener("DOMContentLoaded", () => {
     if (currentUser.Init) {
-        currentUser.AddMaterial(["Wood",3])
+        MaterialsService.getMaterials().forEach(m=>{
+            currentUser.AddMaterial([m.name,200])
+        })
         currentUser.setInit(false);
     }
     RenderInventoryMaterials();
     RenderInventorySwordsAndPossibleSwords();
-    RenderInventoryShields()
+    RenderInventoryShieldsAndPossibleShields()
 });
 
 function HACK_GMFES(){
