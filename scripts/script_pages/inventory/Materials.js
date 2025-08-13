@@ -1,10 +1,10 @@
-const InventoryMaterials = document.querySelector(".materials-list");
 import currentUser from "../CreateAccount.js";
 import { MaterialsService } from "../../materials/main.js";
 
 
 export default function RenderInventoryMaterials() {
-    InventoryMaterials.innerHTML = ``;
+    const InventoryMaterials = document.querySelector(".materials-list");
+    if(InventoryMaterials) InventoryMaterials.innerHTML = ``;
     const fragment = document.createDocumentFragment();
 
     currentUser.Materials.forEach(([name, qty]) => {
@@ -25,5 +25,5 @@ export default function RenderInventoryMaterials() {
         }
     });
 
-    InventoryMaterials.appendChild(fragment);
+    if ( InventoryMaterials ) InventoryMaterials.appendChild(fragment);
 }

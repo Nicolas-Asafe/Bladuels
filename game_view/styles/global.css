@@ -73,3 +73,20 @@ nav{
     width: 100%;
     gap: 10px;
 }
+
+.load-div{
+    position: absolute;
+    background-color: hsl(51, 100%, 49%);
+    width: 100%;
+    top: 50%;
+    left:50%;
+    height: 100%;
+    transform: translate(-50%,-50%);
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img{
+        width: 10%;
+    }
+}

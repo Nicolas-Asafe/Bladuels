@@ -8,12 +8,7 @@ import { CreateShield } from "./Inventory.js";
 
 function RenderInventoryShieldsAndPossibleShields() {
     const InventoryShields = document.querySelector(".shields-list");
-    if (!InventoryShields) {
-        console.error("Elemento .shields-list não encontrado no DOM");
-        return;
-    }
-
-    InventoryShields.innerHTML = "";
+    if(InventoryShields)InventoryShields.innerHTML = "";
     const fragment = document.createDocumentFragment();
 
     currentUser.Shields.forEach(sh => {
@@ -70,7 +65,7 @@ function RenderInventoryShieldsAndPossibleShields() {
         fragment.appendChild(shieldDiv);
     });
 
-    InventoryShields.appendChild(fragment);
+    if(InventoryShields)InventoryShields.appendChild(fragment);
 }
 
 

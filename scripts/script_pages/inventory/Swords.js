@@ -7,9 +7,8 @@ import ShowModal from './modalSword.js';
 
 
 export default function RenderInventorySwordsAndPossibleSwords() {
-    InventorySwords.innerHTML = ``;
+    if (InventorySwords) InventorySwords.innerHTML = ``;
     const fragment = document.createDocumentFragment();
-
     currentUser.Swords.forEach(sword => {
         const swordDiv = document.createElement("div");
         swordDiv.className = "sword-item";
@@ -26,7 +25,7 @@ export default function RenderInventorySwordsAndPossibleSwords() {
         })
     });
 
-    InventorySwords.appendChild(fragment);
+    if (InventorySwords) InventorySwords.appendChild(fragment);
     SwordsForCreate().forEach(sword => {
         const swordDiv = document.createElement("div");
         swordDiv.className = "sword-item";
@@ -44,5 +43,5 @@ export default function RenderInventorySwordsAndPossibleSwords() {
         swordDiv.appendChild(lockDiv);
         fragment.appendChild(swordDiv);
     });
-    InventorySwords.appendChild(fragment);
+    if (InventorySwords) InventorySwords.appendChild(fragment);
 }

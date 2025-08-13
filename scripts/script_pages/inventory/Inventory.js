@@ -6,21 +6,23 @@ import RenderInventoryShieldsAndPossibleShields from "./Shields.js";
 
 const BtnShow = document.querySelector(".OpenBackPack")
 const BackPackDiv = document.querySelector(".BackPack")
-function ShowOrHideInventory(){
-     PlaySound_click()
-    if (BackPackDiv.style.display === "flex"){
+function ShowOrHideInventory() {
+    PlaySound_click()
+    if (BackPackDiv.style.display === "flex") {
         BackPackDiv.style.display = "none"
-    }else{
+    } else {
         BackPackDiv.style.display = "flex"
     }
 }
-BtnShow.addEventListener("click",ShowOrHideInventory)
-document.addEventListener("keydown",function (event){
-    if (event.key === "e"){
-        ShowOrHideInventory()
-        return
-    }
-})
+if (BtnShow || document.location.href === "./index.html") {
+    BtnShow.addEventListener("click", ShowOrHideInventory)
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "e") {
+            ShowOrHideInventory()
+            return
+        }
+    })
+}
 export function CreateSword(sword) {
     sword.materials.forEach(([matName, qty]) => {
         for (let i = 0; i < qty; i++) {

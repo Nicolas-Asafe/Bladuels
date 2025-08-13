@@ -10,9 +10,7 @@ InitializeSwords();
 
 window.addEventListener("DOMContentLoaded", () => {
     if (currentUser.Init) {
-        MaterialsService.getMaterials().forEach(m=>{
-            currentUser.AddMaterial([m.name,200])
-        })
+        currentUser.AddMaterial(["Wood",3])
         currentUser.setInit(false);
     }
     RenderInventoryMaterials();
@@ -21,10 +19,8 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 function HACK_GMFES(){
-     serviceSwords.getSwords().forEach(s=>{
-            s.materials.forEach(m=>{
-                currentUser.AddMaterial(m)
-            })
+    MaterialsService.getMaterials().forEach(m=>{
+            currentUser.AddMaterial([m.name,200])
     })
 }
 function HACK_RDR(){

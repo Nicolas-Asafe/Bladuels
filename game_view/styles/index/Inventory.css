@@ -28,8 +28,9 @@
 }
 
 .BackPack h1 {
-    font-size: 40px;
+    font-size:30px;
     padding: 10px;
+    text-align: center;
     border: 2px solid #7e7e7e;
     box-shadow: 5px 3px 0 #7e7e7e;
     background-color: #f0f0f0;

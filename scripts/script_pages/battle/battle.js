@@ -1,7 +1,7 @@
 import PlaySound_click from "../../ClickSound/main.js";
 
 function InitBattle(){
-    console.log("Iniciando batalha")
+    window.location.href = "./battle.html"
     PlaySound_click()
 }
 const Btn = document.querySelector(".OpenBattle")
