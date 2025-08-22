@@ -90,3 +90,21 @@ nav{
         width: 10%;
     }
 }
+.div{
+    border: 2px solid #7e7e7e;
+    box-shadow: 5px 3px 0 #7e7e7e;
+    transition: all 0.1s ease-in-out;
+}
+.div-white{
+    border: 2px solid whitesmoke;
+    box-shadow: 5px 3px 0 #7e7e7e;
+    transition: all 0.1s ease-in-out;
+}
+.div:hover{
+    transform: translate(2px,2px);
+    box-shadow: 2px 2px 0 #7e7e7e;
+}
+.div:active{
+    transform: translate(4px,4px);
+    box-shadow: 0px 0px 0 #7e7e7e;
+}
