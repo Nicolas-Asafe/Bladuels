@@ -13,6 +13,7 @@ function InitializeSwords(){
     const TitaniumSword = new Sword({name: "TitaniumSword", damage: 20, price: 100,level:0,life:100,materials:[["Titanium",5],["Gold",3],["Iron",2]]});
     const MoonSword = new Sword({name: "MoonSword", damage: 50, price: 200,level:0,life:200,materials:[["MoonCrystal",5],["Gold",4]]});
     const GoldSword = new Sword({name: "GoldSword", damage: 55, price: 300,level:0,life:300, materials:[["Gold",20],["Titanium",3]]});
+    const FrozenBladeIron = new Sword({name:"FrozenBlade",damage:80,price:400,level:0,life:750,materials:[["Iron",10,],["Wood",5],["IceHeart",20]]})
     const MidNightAxe = new Sword({name: "MidnightAxe", damage: 100, price: 500,level:0,life:500,materials:[["MoonCrystal",5],["Titanium",13],["Emerald",5],["Wood",10]]});
     const ShiningSword = new Sword({name:"ShiningSword",damage:230,price: 1200,level:0,life:1100,materials:[["Star",12],["Wood",8],["Gold",15],["Emerald",2]]})
     const TitaniumAxe = new Sword({name: "TitaniumAxe", damage: 290, price: 1000,level:0,life:1000,materials:[["Titanium",20],["Gold",10],["Iron",4],["Wood",15]]});
@@ -28,11 +29,12 @@ function InitializeSwords(){
     const GhostTears = new Sword({name:"GhostTears",damage:2400,price:8000,level:0,life:8000,materials:[["GhostWood",12],["Titanium",8],["BirdTear",23]]})
     const FrozenSickle = new Sword({name:"FrozenSickle",damage:2999,price:8999,level:0,life:18999,materials:[["IceHeart",52]]})
     const BoneColossus = new Sword({name:"BoneColossus",damage:3000,price:9000,level:0,life:9000,materials:[["TitanBones",18],["Titanium",12],["GhostWood",12],["Curse",10]]})
-    const DragonsRage = new Sword({name:"DragonsRage",damage:4500,price:10000,level:0,life:10000,materials:[["DragonScale",20],["Emerald",7],["Gold",12],["Ruby",3]]})
+    const DragonsRage = new Sword({name:"DragonsRage",damage:4500,price:10000,level:0,life:10000,materials:[["DragonScale",20],["Emerald",7],["Gold",12],["Ruby",3],["LiquidFire",30]]})
     const FrozenDragonFury = new Sword({name:"FrozenDragonFury",damage:6000,price:15000,level:0,life:23000,materials:[["DragonScale",20],["IceHeart",20]]})
+    const DragonAxe = new Sword({name:"DragonAxe",damage:7000,price:16040,level:0,life:14000,materials:[["DragonScale",23],["Titanium",10],["Ruby",3],["Gold",5]]})
     const FrozenCurseNoobSword = new Sword({name:"FrozenCurseNoobSword",damage:39000,price:300000,level:0,life:39000,materials:[["IceHeart",230],["Curse",70]]})
     Swords().push(NoobSword, CandySword, IronSword,WaterSword,KnifeSword,DiamondSword,
-        GoldSword,TitaniumSword,SnowSword,MoonLightSword,MoonSword,MidNightAxe,TitaniumAxe,RubySword,ShiningSword,StarSword,EmeraldSword,CursedAxe,GoldenSickle,StarCurse,GhostTears,CandyPoison,FrozenSickle,BoneColossus,DragonsRage,FrozenDragonFury,FrozenCurseNoobSword);
+        GoldSword,TitaniumSword,SnowSword,MoonLightSword,MoonSword,FrozenBladeIron,MidNightAxe,TitaniumAxe,RubySword,ShiningSword,StarSword,EmeraldSword,CursedAxe,GoldenSickle,StarCurse,GhostTears,CandyPoison,FrozenSickle,BoneColossus,DragonsRage,FrozenDragonFury,DragonAxe,FrozenCurseNoobSword);
     }
     const serviceSwords = new ServiceSwords(Swords);    
     

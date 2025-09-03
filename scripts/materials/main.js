@@ -20,8 +20,10 @@ function InitializeMaterials() {
     const GhostWood = new Material("GhostWood",400)
     const TitanBones = new Material("TitanBones")
     const DragonScale = new Material("DragonScale",600)
-    Materials.push(Wood, Iron, Gold, Diamond, Emerald, titanium, Candy, Star, MoonCrystal, BirdTear,Ruby,Curse,DragonScale,GhostWood,TitanBones,IceHeart
-    );
+    const LiquidFire = new Material("LiquidFire",900)
+    Materials.push(Wood, Iron, Gold, Diamond, Emerald, titanium, Candy, Star, MoonCrystal, BirdTear,Ruby,Curse,DragonScale,GhostWood,TitanBones,IceHeart,
+        LiquidFire
+    ); 
 }
 
 export {InitializeMaterials, MaterialsService};
