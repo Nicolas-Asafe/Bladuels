@@ -6,6 +6,7 @@ import java.awt.Font;
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 
+import bladuels.screenGUI.ScreenHome.Buttons.Buttons;
 import bladuels.utils.UtilSounds;
 
 public class ScreenHome extends JPanel {
