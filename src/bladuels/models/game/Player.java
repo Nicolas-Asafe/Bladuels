@@ -6,8 +6,7 @@ import bladuels.models.items.*;
 public class Player {
 	private final String name;
 	private double hearth;
-	private Material[] materials;
-	private Sword[] swords;
+	private Item[] inventory;
 	
 	public Player(String name,double hearth) {
 		this.name = name;
@@ -17,6 +16,5 @@ public class Player {
 	public void ReciveDamage(double damage) {
 		if(damage<=0) throw new ValueInvalidException("Damage value is invalid");
 		this.hearth-=damage;
-		
-	}
+	}	
 }

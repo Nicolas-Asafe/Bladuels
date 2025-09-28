@@ -15,7 +15,7 @@ public class Buttons extends JPanel {
 	    public Buttons() {
 	        setLayout(null);      
 	        setBackground(Color.YELLOW);
-	        setBounds(0, 0, 1000, 130); 
+	        setBounds(0, 0, 1000, 120); 
 	        add(BackpackButton());
 	        add(BattleButton());
 	    }
