@@ -1,8 +1,9 @@
 package bladuels.models.items;
 
 import bladuels.enums.ItemType;
+
 import bladuels.enums.Rarity;
-import bladuels.utils.GetImage;
+
 
 public class Material extends Item {
     private final Rarity rarity;
@@ -14,10 +15,13 @@ public class Material extends Item {
         this.rarity = rarity;
         this.quantity = quantity;
     }
-    public int GetQuantityOfThisMaterial() {
+    public Rarity getRarity() {
+    	return this.rarity;
+    }
+    public int getQuantityOfThisMaterial() {
     	return this.quantity;
     }
-    public Material GetAll() {
+    public Material getAll() {
         return this;
     }
 }

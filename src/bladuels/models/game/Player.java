@@ -2,15 +2,17 @@ package bladuels.models.game;
 
 import bladuels.exceptions.ValueInvalidException;
 import bladuels.models.items.*;
+import bladuels.models.game.Inventory.*;
 
 public class Player {
 	private final String name;
 	private double hearth;
-	private Item[] inventory;
+	public Inventory inventory;
 	
-	public Player(String name,double hearth) {
+	public Player(String name,double hearth,int sizeContent) {
 		this.name = name;
 		this.hearth = hearth;
+		this.inventory = new Inventory(sizeContent);
 	}
 	
 	public void ReciveDamage(double damage) {
