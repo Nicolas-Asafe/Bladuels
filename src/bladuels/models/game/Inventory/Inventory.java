@@ -2,24 +2,24 @@ package bladuels.models.game.Inventory;
 
 import bladuels.exceptions.ItemNotFound;
 import bladuels.exceptions.YouCantDoThis;
-import bladuels.models.game.Inventory.Slot;
 import java.util.List;
 import java.util.ArrayList;
 import bladuels.models.items.Item;
 
 public class Inventory {
 	private List<Slot> slots;
+	@SuppressWarnings("unused")
+	private int sizeContent = 19;
 	public Inventory(int sizeContent) {
-		initInventory(sizeContent);
-	}
-	public List<Slot> getSlots(){
-		return this.slots;
-	}
-	public void initInventory(int sizeContent) {
 		this.slots = new ArrayList<>(sizeContent);
+		this.sizeContent = sizeContent;	
 		for(int i=0;i<sizeContent;i++) {
 			this.slots.add(new Slot(null, 0, i));
 		}
+
+	}
+	public List<Slot> getSlots(){
+		return this.slots;
 	}
 	public void addItem(Item item,int quantityOfItem){
 		for (Slot s : this.slots) {

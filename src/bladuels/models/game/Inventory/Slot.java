@@ -7,25 +7,18 @@ public class Slot {
 	private boolean slotIsVoid = true;
 	private Item item;
 	private int slotIndex;
+	@SuppressWarnings("unused")
 	private int quantityOfItem;
 	public Slot(Item item,int quantityOfItem,int slotIndex) {
 		this.slotIndex = slotIndex;
 		this.quantityOfItem = quantityOfItem;
 	}
-	
-	public Item getItem() {
-		return this.item;
-	}
-	public boolean slotIsVoid() {
-		return this.slotIsVoid;
+	public Slot getAll() {
+		return this;
 	}
 	public int getSlotIndex() {
 		return this.slotIndex;
-	}
-	public int quantityOfItem() {
-		return this.quantityOfItem;
-	}
-	
+	}	
 	public void addItem(Item newItem,int quantityOfItem) {
 		if(!slotIsVoid) throw new YouCantDoThis("This slot is already filled");
 		if(this.item.equals(newItem)) {

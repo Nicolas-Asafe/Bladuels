@@ -1,9 +1,5 @@
 package bladuels.models.items;
 
-import java.awt.Image;
-
-import javax.swing.ImageIcon;
-
 import bladuels.enums.ItemType;
 import bladuels.exceptions.ValueInvalidException;
 
